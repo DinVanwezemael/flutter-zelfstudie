@@ -16,12 +16,14 @@ class MyApp extends StatelessWidget{
           title: new Text("textfield voorbeeld"),
           
         ),
-        body: new Stack(
-          alignment: Alignment.topCenter,
-          children: <Widget>[
-            new Card(child: new Padding(padding: const EdgeInsets.all(200.0),), color: Colors.black,),
-            new Card(child: new Padding(padding: const EdgeInsets.all(100.0),), color: Colors.grey,),
-          ],
+        body: new TextField(
+          autocorrect: true,
+          autofocus: true,
+          onChanged: (value){print(value);},
+          decoration: new InputDecoration(
+            border: InputBorder.none,
+            hintText: "voer een tekst in om te zoeken"
+          ),
         ),
       )
     );
