@@ -1,9 +1,12 @@
 import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 
 
 void main(){
-  runApp(new MyApp());
+  runApp(new MyApp(
+    items: new List<String>.generate(50, (i) => "Item ${i+1}")
+  ));
 }
 
 class MyApp extends StatelessWidget{
